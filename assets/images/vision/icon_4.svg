@@ -1,0 +1,45 @@
+<svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .stroke {
+      stroke: #B78A3B;
+      stroke-width: 4;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      fill: none;
+      stroke-dasharray: 180;
+      stroke-dashoffset: 180;
+      animation: draw 1.8s infinite ease forwards;
+    }
+    .palm {
+      transform-origin: 60px 46px;
+      animation: sway 3s ease-in-out infinite 1.8s;
+    }
+    .sword {
+      animation: glow 2.6s ease-in-out infinite 1.8s;
+    }
+    @keyframes draw { to { stroke-dashoffset: 0; } }
+    @keyframes sway {
+      0%,100% { transform: rotate(0deg); }
+      50% { transform: rotate(3deg); }
+    }
+    @keyframes glow {
+      0%,100% { filter: drop-shadow(0 0 0 rgba(183,138,59,0)); }
+      50% { filter: drop-shadow(0 0 7px rgba(183,138,59,.5)); }
+    }
+  </style>
+  <g class="palm">
+    <path class="stroke" d="M60 18v49"/>
+    <path class="stroke" d="M60 24c-11-11-24-9-31 2"/>
+    <path class="stroke" d="M60 24c11-11 24-9 31 2"/>
+    <path class="stroke" d="M60 34c-13-5-22 1-29 12"/>
+    <path class="stroke" d="M60 34c13-5 22 1 29 12"/>
+    <path class="stroke" d="M60 45c-9 0-17 6-22 15"/>
+    <path class="stroke" d="M60 45c9 0 17 6 22 15"/>
+  </g>
+  <g class="sword">
+    <path class="stroke" d="M32 93l56-27"/>
+    <path class="stroke" d="M88 93L32 66"/>
+    <path class="stroke" d="M27 96l11-3"/>
+    <path class="stroke" d="M93 96l-11-3"/>
+  </g>
+</svg>

@@ -1,0 +1,40 @@
+<svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .stroke {
+      stroke: #B78A3B;
+      stroke-width: 4;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      fill: none;
+      stroke-dasharray: 180;
+      stroke-dashoffset: 180;
+      animation: draw 1.8s ease infinite forwards, glow 2.8s ease-in-out infinite 1.8s;
+    }
+    .person-main { animation-delay: .15s, 1.8s; }
+    .person-side { animation-delay: .35s, 1.8s; }
+    .float {
+      transform-origin: center;
+      animation: float 3s ease-in-out infinite;
+    }
+    @keyframes draw { to { stroke-dashoffset: 0; } }
+    @keyframes glow {
+      0%,100% { filter: drop-shadow(0 0 0 rgba(183,138,59,0)); }
+      50% { filter: drop-shadow(0 0 7px rgba(183,138,59,.45)); }
+    }
+    @keyframes float {
+      0%,100% { transform: translateY(0); }
+      50% { transform: translateY(-5px); }
+    }
+  </style>
+  <g class="float">
+    <circle class="stroke person-main" cx="60" cy="28" r="10"/>
+    <path class="stroke person-main" d="M39 78v-8c0-12 9-21 21-21s21 9 21 21v8"/>
+    <circle class="stroke person-side" cx="29" cy="39" r="8"/>
+    <path class="stroke person-side" d="M13 84v-8c0-10 8-18 18-18h6"/>
+    <circle class="stroke person-side" cx="91" cy="39" r="8"/>
+    <path class="stroke person-side" d="M107 84v-8c0-10-8-18-18-18h-6"/>
+    <path class="stroke" d="M45 92h30"/>
+    <path class="stroke" d="M20 96h14"/>
+    <path class="stroke" d="M86 96h14"/>
+  </g>
+</svg>

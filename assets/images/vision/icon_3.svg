@@ -1,0 +1,40 @@
+<svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .gem {
+      stroke: #B78A3B;
+      stroke-width: 4;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      fill: none;
+      stroke-dasharray: 220;
+      stroke-dashoffset: 220;
+      animation: draw 1.8s ease infinite forwards, shine 2.6s ease-in-out infinite 1.8s;
+    }
+    .spark {
+      fill: #B78A3B;
+      opacity: 0;
+      animation: sparkle 2.4s ease-in-out infinite;
+      transform-origin: center;
+    }
+    .spark.s1 { animation-delay: .3s; }
+    .spark.s2 { animation-delay: 1.1s; }
+    .spark.s3 { animation-delay: 1.8s; }
+    @keyframes draw { to { stroke-dashoffset: 0; } }
+    @keyframes shine {
+      0%,100% { filter: drop-shadow(0 0 0 rgba(183,138,59,0)); transform: translateY(0); }
+      50% { filter: drop-shadow(0 0 8px rgba(183,138,59,.5)); transform: translateY(-3px); }
+    }
+    @keyframes sparkle {
+      0%,70%,100% { opacity:0; transform: scale(.6); }
+      35% { opacity:1; transform: scale(1); }
+    }
+  </style>
+  <path class="gem" d="M30 30h60l15 22-45 48L15 52l15-22Z"/>
+  <path class="gem" d="M15 52h90"/>
+  <path class="gem" d="M30 30l17 22 13-22 13 22 17-22"/>
+  <path class="gem" d="M47 52l13 48"/>
+  <path class="gem" d="M73 52l-13 48"/>
+  <circle class="spark s1" cx="26" cy="23" r="3"/>
+  <circle class="spark s2" cx="97" cy="35" r="3"/>
+  <circle class="spark s3" cx="88" cy="88" r="2.5"/>
+</svg>

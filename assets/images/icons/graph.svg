@@ -1,0 +1,33 @@
+<svg width="661" height="690" viewBox="0 0 661 690" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="grapph 1" clip-path="url(#clip0_1_2)">
+<path id="translate_1" style="transform-origin: center; transform-box: fill-box; animation: translateX 2s linear infinite alternate;" d="M437.488 271.903L371.212 223.652L423.943 148.608L364.771 106.939L106.966 296.399L172.618 497.775L233.819 413.463L304.233 462.921L142.485 690L-0.176453 270.93L363.834 0L541 126.021L437.488 271.903Z" fill="#ACD4A2"/>
+<path id="translate_2" style="transform-origin: center; transform-box: fill-box; animation: translateX1 2s linear infinite alternate;" d="M510.493 467.836L545.288 494.483L575.264 453.053L606.701 475.613L555.906 638.957L442.488 641.105L474.467 595.442L437.106 568.565L350.474 690L587.53 688.561L661 457.348L566.211 390L510.493 467.836Z" fill="#333F99"/>
+</g>
+<defs>
+<clipPath id="clip0_1_2">
+<rect width="661" height="690" fill="white"/>
+</clipPath>
+</defs>
+<style>
+  @keyframes translateX1 {
+    0%,
+    100% {
+      transform: translateX(0px);
+    }
+
+    50% {
+      transform: translateX(-30px);
+    }
+  }
+  @keyframes translateX {
+    0%,
+    100% {
+      transform: translateX(0px);
+    }
+
+    50% {
+      transform: translateX(30px);
+    }
+  }
+</style>
+</svg>

@@ -1,0 +1,56 @@
+<svg width="116" height="111" viewBox="0 0 116 111" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Group 1">
+<path id="translate_2" style="transform-origin: center; transform-box: fill-box; animation: translateX 2s linear infinite alternate;" d="M44.0448 45.7114L33.8623 53.5131L25.09 41.3832L15.8903 47.9884L30.7551 95.812L63.9459 96.4408L54.5875 83.0717L65.5209 75.2028L90.8734 110.756L21.5005 110.335L0 42.6408L27.7394 22.9229L44.0448 45.7114Z" fill="#ACD4A2"/>
+<path id="translate_1" style="transform-origin: center; transform-box: fill-box; animation: translateX1 2s linear infinite alternate;" d="M47.5488 42.6225L57.9145 35.0588L49.6671 23.2952L58.9217 16.7633L99.2428 46.4623L88.9748 78.0293L79.4027 64.8128L68.39 72.5656L93.6875 108.162L116 42.4698L59.0683 0L31.3594 19.7546L47.5488 42.6225Z" fill="#989ECB"/>
+</g>
+<style>
+  @keyframes translateX1 {
+    0%,
+    100% {
+      transform: translateX(0px);
+    }
+
+    50% {
+      transform: translateX(-4px);
+    }
+  }
+  @keyframes translateX {
+    0%,
+    100% {
+      transform: translateX(0px);
+    }
+
+    50% {
+      transform: translateX(4px);
+    }
+  }
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+
+  50% {
+    transform: rotate(10deg) scale(.9);
+  }
+
+  100% {
+    transform: rotate(0deg) scale(1);
+  }
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  30% {
+    transform: rotate(40deg);
+  }
+
+  50%, 70%, 100% {
+    transform: rotate(0deg);
+  }
+}
+</style>
+</svg>

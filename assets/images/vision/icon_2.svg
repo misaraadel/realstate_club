@@ -1,0 +1,52 @@
+<svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .line {
+      stroke: #B78A3B;
+      stroke-width: 4;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      fill: none;
+      stroke-dasharray: 220;
+      stroke-dashoffset: 220;
+      animation: draw 1.7s ease infinite forwards, glow 3s ease-in-out infinite 1.7s;
+    }
+    .win {
+      stroke: #B78A3B;
+      stroke-width: 4;
+      stroke-linecap: round;
+      animation: blink 2.2s ease-in-out infinite;
+    }
+    .lift {
+      transform-origin: center;
+      animation: lift 3.2s ease-in-out infinite;
+    }
+    @keyframes draw { to { stroke-dashoffset: 0; } }
+    @keyframes glow {
+      0%,100% { filter: drop-shadow(0 0 0 rgba(183,138,59,0)); }
+      50% { filter: drop-shadow(0 0 7px rgba(183,138,59,.45)); }
+    }
+    @keyframes blink {
+      0%,100% { opacity:.55; }
+      50% { opacity:1; }
+    }
+    @keyframes lift {
+      0%,100% { transform: translateY(0); }
+      50% { transform: translateY(-4px); }
+    }
+  </style>
+  <g class="lift">
+    <path class="line" d="M24 96h72"/>
+    <path class="line" d="M35 96V47h22v49"/>
+    <path class="line" d="M63 96V25h22v71"/>
+    <path class="line" d="M46 47V24"/>
+    <path class="line" d="M74 25V10"/>
+    <path class="win" d="M42 60h8"/>
+    <path class="win" d="M42 72h8"/>
+    <path class="win" d="M42 84h8"/>
+    <path class="win" d="M70 38h8"/>
+    <path class="win" d="M70 50h8"/>
+    <path class="win" d="M70 62h8"/>
+    <path class="win" d="M70 74h8"/>
+    <path class="win" d="M70 86h8"/>
+  </g>
+</svg>
