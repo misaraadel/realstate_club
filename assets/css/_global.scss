@@ -1,18 +1,36 @@
 @font-face {
-    font-family: "din";
-    src: url('../fonts/din/ArbFONTS-DINNextLTArabic-Medium-2.ttf');
+    font-family: "IBM";
+    src: url('../fonts/IBM/IBMPlexSansArabic-Medium.ttf');
     font-weight: 700;
 }
 
 @font-face {
-    font-family: "din";
-    src: url('../fonts/din/ArbFONTS-DINNextLTArabic-Regular-2.ttf');
+    font-family: "IBM";
+    src: url('../fonts/IBM/IBMPlexSansArabic-Regular.ttf');
     font-weight: 500;
 }
 
 @font-face {
-    font-family: "din";
-    src: url('../fonts/din/ArbFONTS-DINNextLTArabic-Bold-4.ttf');
+    font-family: "IBM";
+    src: url('../fonts/IBM/IBMPlexSansArabic-Bold.ttf');
+    font-weight: 900;
+}
+
+@font-face {
+    font-family: "Cormorant_Garamond";
+    src: url('../fonts/Cormorant_Garamond/CormorantGaramond-Medium.ttf');
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: "Cormorant_Garamond";
+    src: url('../fonts/Cormorant_Garamond/CormorantGaramond-Regular.ttf');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: "Cormorant_Garamond";
+    src: url('../fonts/Cormorant_Garamond/CormorantGaramond-Bold.ttf');
     font-weight: 900;
 }
 
@@ -34,11 +52,19 @@
   }
 }
 
+html[dir="rtl"] * {
+    font-family: "IBM" , sans-serif ;
+}
+
+html[dir="ltr"] * {
+    font-family: "Cormorant_Garamond" , sans-serif ;
+}
+
+
 
 * {
     margin: 0px;
     box-sizing: border-box;
-    font-family: "din" , sans-serif ;
     scroll-behavior: smooth;
 
     &::selection{
