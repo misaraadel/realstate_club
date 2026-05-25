@@ -454,9 +454,10 @@
       img {
         width: 100%;
         height: 100%;
-        filter: contrast(1.1);
-        mix-blend-mode: multiply;
+        mix-blend-mode: multiply !important;
         object-fit: contain;
+        mix-blend-mode: multiply;
+        background: transparent;
       }
 
       span {
@@ -615,7 +616,7 @@
 
 header {
   width: 100%;
-  padding: 100px 0px 40px;
+  padding: 150px 0px 40px;
   min-height: 100vh;
   position: relative;
   z-index: 9;
@@ -636,9 +637,11 @@ header {
     }
 
     .logo {
-      width: 300px;
-      height: 300px;
+      width: 100px;
+      height: 100px;
       object-fit: contain;
+      display: block;
+      margin-bottom: 20px;
       animation: translateX 2s linear infinite alternate;
 
       @include media() {
@@ -651,7 +654,7 @@ header {
       font-size: 50px;
       font-weight: 900;
       color: var(--primary-color);
-      margin: 0px;
+      margin-bottom: 25px;
 
       @include media() {
         font-size: 25px;
@@ -660,9 +663,9 @@ header {
 
     p {
       color: var(--secondary-color);
-      font-size: 17px;
+      font-size: 14px;
       font-weight: 500;
-      margin: 50px 0px;
+      margin-bottom: 15px;
 
       span {
         display: block;
@@ -735,7 +738,7 @@ header {
   }
 }
 
-.sub-header  {
+.sub-header {
   width: 100%;
   padding: 150px 0px 50px;
   background-color: #fffcfa;
@@ -751,7 +754,8 @@ header {
       margin: 0px auto 30px;
       padding-bottom: 20px;
 
-      &::after, &::before {
+      &::after,
+      &::before {
         height: 2px;
         border-radius: 10px;
         width: 45%;
@@ -776,7 +780,7 @@ header {
         padding-inline-end: 20px;
 
         &::after {
-          content: '';
+          content: "";
           position: absolute;
           width: 10px;
           height: 10px;
@@ -983,8 +987,8 @@ header {
       padding: 20px 10px;
       text-align: center;
       background-color: #fffaf0;
-      border: 1px solid rgba($color: #c49a4a, $alpha: 0.40);
-      transition: all .3s linear;
+      border: 1px solid rgba($color: #c49a4a, $alpha: 0.4);
+      transition: all 0.3s linear;
 
       svg {
         width: 40px;
@@ -1002,7 +1006,7 @@ header {
         transform: translateY(-10px);
 
         svg {
-          animation: tada .3s linear both;
+          animation: tada 0.3s linear both;
         }
       }
     }
@@ -1097,7 +1101,7 @@ header {
     width: 100%;
     padding: 10px;
     border-radius: 20px;
-    border: 1px solid rgba($color: #ca964d, $alpha: .5);
+    border: 1px solid rgba($color: #ca964d, $alpha: 0.5);
     background-color: #fffcfa;
     transition: all 0.3s linear;
 
@@ -1109,6 +1113,7 @@ header {
 
       img {
         @include coverImg();
+        object-position: top;
       }
     }
 
@@ -1310,7 +1315,6 @@ header {
         margin-top: 20px;
       }
     }
-    
   }
 
   .custom-btn {
@@ -1852,6 +1856,7 @@ footer {
   padding-inline-end: 10px !important;
   padding-inline-start: 10px !important;
   padding-bottom: 10px !important;
+  display: none;
 
   .contain {
     width: 100%;
@@ -2073,7 +2078,9 @@ footer {
   justify-content: center;
   background: #090806;
   overflow: hidden;
-  transition: opacity 0.7s ease, visibility 0.7s ease;
+  transition:
+    opacity 0.7s ease,
+    visibility 0.7s ease;
 }
 
 .page-loader.hide {
@@ -2103,7 +2110,11 @@ footer {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(circle at center, rgba(196, 154, 74, 0.18), transparent 35%),
+    radial-gradient(
+      circle at center,
+      rgba(196, 154, 74, 0.18),
+      transparent 35%
+    ),
     linear-gradient(to bottom, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.85));
 }
 
@@ -2176,7 +2187,11 @@ footer {
 
 .logo-ring::before {
   inset: 28px;
-  background: radial-gradient(circle, rgba(196, 154, 74, 0.18), transparent 68%);
+  background: radial-gradient(
+    circle,
+    rgba(196, 154, 74, 0.18),
+    transparent 68%
+  );
   animation: pulseGlow 2.2s ease-in-out infinite alternate;
 }
 
@@ -2222,12 +2237,7 @@ footer {
   top: 0;
   width: 40%;
   height: 100%;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    #e7c982,
-    transparent
-  );
+  background: linear-gradient(90deg, transparent, #e7c982, transparent);
   animation: lineMove 1.7s ease-in-out infinite;
 }
 
@@ -2363,11 +2373,15 @@ footer {
   border: 1px solid rgba(202, 150, 77, 0.35);
   border-radius: 22px;
   background:
-    linear-gradient(145deg, rgba(202,150,77,0.08), rgba(255,255,255,0.02)),
+    linear-gradient(
+      145deg,
+      rgba(202, 150, 77, 0.08),
+      rgba(255, 255, 255, 0.02)
+    ),
     #111;
   text-align: center;
   overflow: hidden;
-  transition: all .3s linear;
+  transition: all 0.3s linear;
 
   &:hover {
     transform: translateY(-10px);
@@ -2378,7 +2392,7 @@ footer {
   content: "";
   position: absolute;
   inset: 14px;
-  border: 1px solid rgba(202,150,77,0.18);
+  border: 1px solid rgba(202, 150, 77, 0.18);
   border-radius: 18px;
   pointer-events: none;
 }
@@ -2388,11 +2402,11 @@ footer {
   height: 72px;
   margin: 0 auto 22px;
   border-radius: 50%;
-  border: 1px solid rgba(202,150,77,0.45);
+  border: 1px solid rgba(202, 150, 77, 0.45);
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(202,150,77,0.08);
+  background: rgba(202, 150, 77, 0.08);
 }
 
 .certificate-card h3 {
@@ -2404,7 +2418,7 @@ footer {
 
 .certificate-card p {
   margin: 0;
-  color: rgba(255,255,255,0.78);
+  color: rgba(255, 255, 255, 0.78);
   font-size: 15px;
   line-height: 1.8;
 }

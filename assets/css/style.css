@@ -990,10 +990,11 @@ html[dir=ltr] .custom-heading h1::after {
 .navbar .contain .brand-name img {
   width: 100%;
   height: 100%;
-  filter: contrast(1.1);
-  mix-blend-mode: multiply;
+  mix-blend-mode: multiply !important;
   -o-object-fit: contain;
      object-fit: contain;
+  mix-blend-mode: multiply;
+  background: transparent;
 }
 .navbar .contain .brand-name span {
   width: 100%;
@@ -1141,7 +1142,7 @@ html[dir=ltr] .custom-heading h1::after {
 
 header {
   width: 100%;
-  padding: 100px 0px 40px;
+  padding: 150px 0px 40px;
   min-height: 100vh;
   position: relative;
   z-index: 9;
@@ -1166,10 +1167,12 @@ header .contain {
   }
 }
 header .contain .logo {
-  width: 300px;
-  height: 300px;
+  width: 100px;
+  height: 100px;
   -o-object-fit: contain;
      object-fit: contain;
+  display: block;
+  margin-bottom: 20px;
   animation: translateX 2s linear infinite alternate;
 }
 @media (max-width: 992px) {
@@ -1182,7 +1185,7 @@ header .contain h1 {
   font-size: 50px;
   font-weight: 900;
   color: var(--primary-color);
-  margin: 0px;
+  margin-bottom: 25px;
 }
 @media (max-width: 992px) {
   header .contain h1 {
@@ -1191,9 +1194,9 @@ header .contain h1 {
 }
 header .contain p {
   color: var(--secondary-color);
-  font-size: 17px;
+  font-size: 14px;
   font-weight: 500;
-  margin: 50px 0px;
+  margin-bottom: 15px;
 }
 header .contain p span {
   display: block;
@@ -1601,6 +1604,8 @@ html[dir=ltr] .sub-header .contain .header-link a::after {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
 }
 .news .box .contain {
   width: 100%;
@@ -2297,6 +2302,7 @@ footer {
   padding-inline-end: 10px !important;
   padding-inline-start: 10px !important;
   padding-bottom: 10px !important;
+  display: none;
 }
 footer .contain {
   width: 100%;
