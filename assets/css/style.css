@@ -1419,8 +1419,8 @@ html[dir=ltr] .sub-header .contain .header-link a::after {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  -o-object-position: top right;
-     object-position: top right;
+  -o-object-position: top center;
+     object-position: top center;
 }
 .about-us .contain {
   display: flex;
